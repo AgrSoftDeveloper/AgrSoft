@@ -1,0 +1,44 @@
+# ==========================================
+# Dynamics 365 F&O UDE Standard GitIgnore
+# ==========================================
+
+# --- Visual Studio Noise ---
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.suo.tmp
+*.swp
+*-[Rr]eopened.txt
+
+# --- General Build & Output Artifacts ---
+[Bb]in/
+[Oo]bj/
+XppIL/
+*.xppsource
+*.log
+*.err
+*.bak
+
+# --- UDE Metadata Folder Specifcs ---
+# Exclude localized compiler outputs inside your custom metadata models
+Metadata/**/bin/
+Metadata/**/obj/
+Metadata/**/XppIL/
+Metadata/**/*.log
+Metadata/**/*.err
+
+# EXCEPTION: Explicitly ensure X++ source XMLs and model descriptors are tracked
+!Metadata/**/*.xml
+
+# --- NuGet Packages ---
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# --- OS Artifacts ---
+Thumbs.db
+.DS_Store
