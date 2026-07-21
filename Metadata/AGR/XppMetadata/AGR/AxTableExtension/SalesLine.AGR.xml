@@ -9,6 +9,7 @@
 			<Label>Is Delivered</Label>
 			<Mandatory>No</Mandatory>
 			<EnumType>NoYes</EnumType>
+			<EnumValue>No</EnumValue>
 		</AxTableField>
 	</Fields>
 	<FieldGroups />
