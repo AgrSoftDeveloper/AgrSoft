@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SalesTable.AGR</Name>
+	<DataSources />
+	<Design>
+		<Controls>
+			<AxFormControlExtension i:type="AxFormCheckBoxControlExtension">
+				<Name>AGRSalesLine_IsDelivered</Name>
+				<DataField>AGRIsDelivered</DataField>
+				<DataSource>SalesLine</DataSource>
+				<Label>Is Delivered</Label>
+			</AxFormControlExtension>
+		</Controls>
+	</Design>
+	<Parts />
+	<Permissions />
+	<Methods />
+</AxFormExtension>
