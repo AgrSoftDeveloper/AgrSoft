@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxTableExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>CustTable.AGR</Name>
-	<Fields>
-		<AxTableFieldString>
-			<Name>AGRCustomerReference</Name>
-			<ExtendedDataType>Name</ExtendedDataType>
-			<Label>Customer Reference</Label>
-			<StringSize>100</StringSize>
-			<HelpText>Customer reference number or identifier</HelpText>
-		</AxTableFieldString>
-	</Fields>
-	<FieldGroups />
-	<Indexes />
-	<Mappings />
-	<Relations />
+  <Name>CustTable.AGR</Name>
+  <Fields>
+    <AxTableField xmlns="" i:type="AxTableFieldString">
+      <Name>AGRCustomerReference</Name>
+      <AllowEdit>Yes</AllowEdit>
+      <AllowEditOnCreate>Yes</AllowEditOnCreate>
+      <Label>Customer Reference</Label>
+      <Mandatory>No</Mandatory>
+      <HelpText>Customer reference number or identifier</HelpText>
+      <StringSize>100</StringSize>
+    </AxTableField>
+  </Fields>
+  <FieldGroups />
+  <Indexes />
+  <Mappings />
+  <Relations />
 </AxTableExtension>
