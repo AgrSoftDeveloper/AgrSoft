@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
-	<Name>CustTable.AGR</Name>
-	<ControlModifications />
-	<Controls>
-		<AxFormControlExtension xmlns="" i:type="AxFormTabPageControlExtension">
-			<Name>TabPageGeneral</Name>
-			<Controls>
-				<AxFormControlExtension i:type="AxFormStringControlExtension">
-					<Name>AGRCustomerReference</Name>
-					<DataSource>CustTable</DataSource>
-					<DataField>AGRCustomerReference</DataField>
-					<Label>Customer Reference</Label>
-					<HelpText>Customer reference number or identifier</HelpText>
-				</AxFormControlExtension>
-			</Controls>
-		</AxFormControlExtension>
-	</Controls>
-	<DataSources />
-	<Parts />
-	<PropertyModifications />
+  <Name>CustTable.AGR</Name>
+  <ControlModifications />
+  <Controls>
+    <AxFormExtensionControl xmlns="">
+      <Name>Copy1agr0cu01</Name>
+      <FormControl xmlns=""
+        i:type="AxFormStringControl">
+        <Name>CustTable_AGRCustomerReference</Name>
+        <Type>String</Type>
+        <FormControlExtension
+          i:nil="true" />
+        <DataField>AGRCustomerReference</DataField>
+        <DataSource>CustTable</DataSource>
+      </FormControl>
+      <Parent>TabDetails</Parent>
+    </AxFormExtensionControl>
+  </Controls>
+  <DataSourceModifications />
+  <DataSourceReferences />
+  <DataSources />
+  <Parts />
+  <PropertyModifications />
 </AxFormExtension>
