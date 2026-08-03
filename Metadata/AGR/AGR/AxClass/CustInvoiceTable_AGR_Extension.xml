@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustInvoiceTable_AGR_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+/// <summary>
+/// Extension class for CustInvoiceTable.
+/// Automatically populates the Customer Reference field from CustTable.AGRCustomerReference
+/// when a customer account is selected or changed on the Free Text Invoice header.
+/// </summary>
+[ExtensionOf(tableStr(CustInvoiceTable))]
+final class CustInvoiceTable_AGR_Extension
+{
+}
+		]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>modifiedField</Name>
+				<Source><![CDATA[
+	/// <summary>
+	/// Overrides modifiedField to populate CustomerRef from CustTable.AGRCustomerReference
+	/// whenever the customer account field is changed on the Free Text Invoice header.
+	/// </summary>
+	/// <param name="_fieldId">The ID of the field that was modified.</param>
+	public void modifiedField(FieldId _fieldId)
+	{
+		next modifiedField(_fieldId);
+
+		if (_fieldId == fieldNum(CustInvoiceTable, CustAccount))
+		{
+			CustTable custTable = CustTable::find(this.CustAccount);
+
+			if (custTable)
+			{
+				this.CustomerRef = custTable.AGRCustomerReference;
+			}
+		}
+	}
+				]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
