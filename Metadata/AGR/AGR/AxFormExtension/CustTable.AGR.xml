@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>CustTable.AGR</Name>
+	<DataSources />
+	<Design>
+		<Controls>
+			<AxFormControlExtension i:type="AxFormTabPageControlExtension">
+				<Name>TabPageGeneral</Name>
+				<Controls>
+					<AxFormControlExtension i:type="AxFormStringControlExtension">
+						<Name>AGRCustomerReference</Name>
+						<DataSource>CustTable</DataSource>
+						<DataField>AGRCustomerReference</DataField>
+						<Label>Customer Reference</Label>
+						<HelpText>Customer reference number or identifier</HelpText>
+					</AxFormControlExtension>
+				</Controls>
+			</AxFormControlExtension>
+		</Controls>
+	</Design>
+</AxFormExtension>
