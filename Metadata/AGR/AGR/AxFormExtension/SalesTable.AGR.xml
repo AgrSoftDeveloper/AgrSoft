@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
 	<Name>SalesTable.AGR</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormControlExtension xmlns="" i:type="AxFormCheckBoxControlExtension">
+			<Name>AGRSalesLine_IsDelivered</Name>
+			<DataField>AGRIsDelivered</DataField>
+			<DataSource>SalesLine</DataSource>
+		</AxFormControlExtension>
+	</Controls>
 	<DataSources />
-	<Design>
-		<Controls>
-			<AxFormControlExtension i:type="AxFormCheckBoxControlExtension">
-				<Name>AGRSalesLine_IsDelivered</Name>
-				<DataField>AGRIsDelivered</DataField>
-				<DataSource>SalesLine</DataSource>
-				<Label>Is Delivered</Label>
-			</AxFormControlExtension>
-		</Controls>
-	</Design>
 	<Parts />
-	<Permissions />
-	<Methods />
+	<PropertyModifications />
 </AxFormExtension>
