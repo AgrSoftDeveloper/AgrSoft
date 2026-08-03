@@ -19,16 +19,16 @@ final class CustInvoiceTable_AGR_Extension
 				<Source><![CDATA[
 	/// <summary>
 	/// Overrides modifiedField to populate CustomerRef from CustTable.AGRCustomerReference
-	/// whenever the customer account field is changed on the Free Text Invoice header.
+	/// whenever the customer account (OrderAccount) is changed on the Free Text Invoice header.
 	/// </summary>
 	/// <param name="_fieldId">The ID of the field that was modified.</param>
 	public void modifiedField(FieldId _fieldId)
 	{
 		next modifiedField(_fieldId);
 
-		if (_fieldId == fieldNum(CustInvoiceTable, CustAccount))
+		if (_fieldId == fieldNum(CustInvoiceTable, OrderAccount))
 		{
-			CustTable custTable = CustTable::find(this.CustAccount);
+			CustTable custTable = CustTable::find(this.OrderAccount);
 
 			if (custTable)
 			{
@@ -36,7 +36,7 @@ final class CustInvoiceTable_AGR_Extension
 			}
 		}
 	}
-				]]></Source>
+			]]></Source>
 			</Method>
 		</Methods>
 	</SourceCode>
